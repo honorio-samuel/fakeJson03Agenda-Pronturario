@@ -1,0 +1,71 @@
+{
+  "convenios": [
+    { "id": 1, "razaoSocial": "Operadora Saúde Exemplo S.A.", "registroAns": "000001", "situacao": "ATIVO" },
+    { "id": 2, "razaoSocial": "Plano Vida Exemplo Ltda.", "registroAns": "000002", "situacao": "ATIVO" }
+  ],
+  "procedimentos": [
+    { "id": 1, "codigo": "10101012", "nome": "Consulta em consultório", "duracaoPadrao": 30, "precoParticular": 250.0, "exigeAutorizacao": false },
+    { "id": 2, "codigo": "10101013", "nome": "Consulta pediátrica", "duracaoPadrao": 30, "precoParticular": 280.0, "exigeAutorizacao": false },
+    { "id": 3, "codigo": "30000001", "nome": "Procedimento dermatológico ambulatorial", "duracaoPadrao": 60, "precoParticular": 450.0, "exigeAutorizacao": true }
+  ],
+  "gradesHorario": [
+    { "id": 1, "diaSemana": "SEGUNDA", "horaInicio": "08:00", "horaFim": "12:00", "granularidade": 30, "idMedico": 5 },
+    { "id": 2, "diaSemana": "QUARTA", "horaInicio": "08:00", "horaFim": "12:00", "granularidade": 30, "idMedico": 5 },
+    { "id": 3, "diaSemana": "TERCA", "horaInicio": "13:00", "horaFim": "18:00", "granularidade": 30, "idMedico": 6 },
+    { "id": 4, "diaSemana": "QUINTA", "horaInicio": "08:00", "horaFim": "12:00", "granularidade": 30, "idMedico": 7 },
+    { "id": 5, "diaSemana": "SEGUNDA", "horaInicio": "13:00", "horaFim": "17:00", "granularidade": 30, "idMedico": 7 }
+  ],
+  "bloqueiosAgenda": [
+    { "id": 1, "dataInicio": "2026-12-14T00:00:00", "dataFim": "2026-12-31T23:59:59", "motivo": "FERIAS", "idMedico": 6 },
+    { "id": 2, "dataInicio": "2026-10-19T08:00:00", "dataFim": "2026-10-19T12:00:00", "motivo": "CONGRESSO", "idMedico": 5 }
+  ],
+  "consultas": [
+    { "id": 1, "dataHora": "2026-09-28T09:00:00", "duracao": 30, "status": "EM_ATENDIMENTO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 8, "idMedico": 5, "idProcedimento": 1, "idConvenio": 1 },
+    { "id": 2, "dataHora": "2026-09-28T10:00:00", "duracao": 30, "status": "NA_RECEPCAO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 9, "idMedico": 5, "idProcedimento": 1, "idConvenio": null },
+    { "id": 3, "dataHora": "2026-09-16T09:00:00", "duracao": 30, "status": "FINALIZADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 10, "idMedico": 5, "idProcedimento": 1, "idConvenio": 2 },
+    { "id": 4, "dataHora": "2026-09-29T14:00:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "PORTAL", "motivoCancelamento": null, "idPaciente": 11, "idMedico": 6, "idProcedimento": 2, "idConvenio": 1 },
+    { "id": 5, "dataHora": "2026-10-01T09:00:00", "duracao": 60, "status": "AGENDADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 8, "idMedico": 7, "idProcedimento": 3, "idConvenio": 1 },
+    { "id": 6, "dataHora": "2026-09-14T11:00:00", "duracao": 30, "status": "CANCELADO", "canalOrigem": "PORTAL", "motivoCancelamento": "Cancelado pelo titular pelo portal", "idPaciente": 9, "idMedico": 5, "idProcedimento": 1, "idConvenio": null },
+    { "id": 7, "dataHora": "2026-09-14T09:00:00", "duracao": 30, "status": "FINALIZADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 8, "idMedico": 5, "idProcedimento": 1, "idConvenio": 1 },
+    { "id": 8, "dataHora": "2026-09-28T08:00:00", "duracao": 30, "status": "FINALIZADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 10, "idMedico": 5, "idProcedimento": 1, "idConvenio": null },
+    { "id": 9, "dataHora": "2026-09-28T08:30:00", "duracao": 30, "status": "NAO_COMPARECEU", "canalOrigem": "PORTAL", "motivoCancelamento": null, "idPaciente": 13, "idMedico": 5, "idProcedimento": 1, "idConvenio": 1 },
+    { "id": 10, "dataHora": "2026-09-28T09:30:00", "duracao": 30, "status": "CANCELADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": "Cancelado pelo titular por telefone", "idPaciente": 14, "idMedico": 5, "idProcedimento": 1, "idConvenio": null },
+    { "id": 11, "dataHora": "2026-09-28T10:30:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "PORTAL", "motivoCancelamento": null, "idPaciente": 15, "idMedico": 5, "idProcedimento": 1, "idConvenio": 2 },
+    { "id": 12, "dataHora": "2026-09-28T11:00:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 16, "idMedico": 5, "idProcedimento": 1, "idConvenio": null },
+    { "id": 13, "dataHora": "2026-09-28T11:30:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 17, "idMedico": 5, "idProcedimento": 1, "idConvenio": 1 },
+    { "id": 14, "dataHora": "2026-09-28T13:00:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "PORTAL", "motivoCancelamento": null, "idPaciente": 18, "idMedico": 7, "idProcedimento": 1, "idConvenio": null },
+    { "id": 15, "dataHora": "2026-09-28T13:30:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 19, "idMedico": 7, "idProcedimento": 1, "idConvenio": 1 },
+    { "id": 16, "dataHora": "2026-09-28T14:00:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "PORTAL", "motivoCancelamento": null, "idPaciente": 20, "idMedico": 7, "idProcedimento": 1, "idConvenio": 2 },
+    { "id": 17, "dataHora": "2026-09-28T15:00:00", "duracao": 30, "status": "AGENDADO", "canalOrigem": "RECEPCAO", "motivoCancelamento": null, "idPaciente": 21, "idMedico": 7, "idProcedimento": 1, "idConvenio": null }
+  ],
+  "prontuarios": [
+    { "id": 1, "dataAbertura": "2026-09-14T09:00:00", "situacao": "ABERTO", "idPaciente": 8 },
+    { "id": 2, "dataAbertura": "2026-09-16T09:00:00", "situacao": "ABERTO", "idPaciente": 10 }
+  ],
+  "anexos": [
+    { "id": 1, "nomeArquivo": "exame_2026-09-16.pdf", "tipoMime": "application/pdf", "tamanho": 245760, "dataEnvio": "2026-09-16T10:20:00", "statusVarredura": "LIMPO", "idProntuario": 2 },
+    { "id": 2, "nomeArquivo": "documento_2026-09-28.pdf", "tipoMime": "application/pdf", "tamanho": 128000, "dataEnvio": "2026-09-28T09:15:00", "statusVarredura": "EM_VARREDURA", "idProntuario": 1 }
+  ],
+  "registrosClinicos": [
+    { "id": 1, "dataHora": "2026-09-14T09:00:00", "queixas": "Check-up de rotina.", "exameFisico": "Sem alterações.", "diagnostico": "Exame de rotina sem alterações", "cid": "Z00.0", "conduta": "Manter acompanhamento anual.", "selado": true, "idProntuario": 1, "idConsulta": 7 },
+    { "id": 2, "dataHora": "2026-09-16T09:00:00", "queixas": "Dor de cabeça recorrente há duas semanas.", "exameFisico": "Sem alterações relevantes.", "diagnostico": "Cefaleia tensional", "cid": "G44.2", "conduta": "Analgesia e retorno em 15 dias.", "selado": true, "idProntuario": 2, "idConsulta": 3 },
+    { "id": 3, "dataHora": "2026-09-28T09:00:00", "queixas": "Tosse seca há cinco dias.", "exameFisico": "Ausculta pulmonar limpa.", "diagnostico": "Infecção de vias aéreas superiores", "cid": "J06.9", "conduta": "Hidratação, repouso e reavaliação se persistir.", "selado": false, "idProntuario": 1, "idConsulta": 1 },
+    { "id": 4, "dataHora": "2026-09-28T08:00:00", "queixas": "Retorno antecipado: cefaleia persistente apesar da analgesia.", "exameFisico": "Sem sinais neurológicos focais.", "diagnostico": "Cefaleia tensional", "cid": "G44.2", "conduta": "Ajuste da analgesia e orientação sobre higiene do sono.", "selado": true, "idProntuario": 2, "idConsulta": 8 }
+  ],
+  "retificacoes": [
+    { "id": 1, "dataHora": "2026-09-17T08:30:00", "motivo": "Correção do prazo de retorno registrado", "textoAnterior": "Analgesia e retorno em 15 dias.", "textoCorrigido": "Analgesia e retorno em 30 dias.", "idRegistroClinico": 2 }
+  ],
+  "prescricoes": [
+    { "id": 1, "dataEmissao": "2026-09-16", "validade": "2026-10-16", "tipoReceita": "SIMPLES", "assinaturaDigital": "assinatura-exemplo-01", "idRegistroClinico": 2 },
+    { "id": 2, "dataEmissao": "2026-09-28", "validade": "2026-10-28", "tipoReceita": "SIMPLES", "assinaturaDigital": "assinatura-exemplo-02", "idRegistroClinico": 3 }
+  ],
+  "itensPrescricao": [
+    { "id": 1, "medicamento": "Dipirona", "concentracao": "500 mg", "posologia": "1 comprimido a cada 8 horas por 3 dias", "quantidade": 9, "idPrescricao": 1 },
+    { "id": 2, "medicamento": "Paracetamol", "concentracao": "750 mg", "posologia": "1 comprimido a cada 8 horas se houver dor", "quantidade": 10, "idPrescricao": 1 },
+    { "id": 3, "medicamento": "Dipirona", "concentracao": "500 mg", "posologia": "1 comprimido a cada 6 horas se houver febre", "quantidade": 12, "idPrescricao": 2 }
+  ],
+  "anotacoesPrivadas": [
+    { "id": 1, "dataHora": "2026-09-16T09:40:00", "texto": "Reavaliar adesão ao tratamento no retorno.", "idMedico": 5, "idPaciente": 10 },
+    { "id": 2, "dataHora": "2026-09-28T09:20:00", "texto": "Verificar necessidade de encaminhamento.", "idMedico": 5, "idPaciente": 8 }
+  ]
+}
